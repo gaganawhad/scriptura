@@ -1,0 +1,6 @@
+.bundle
+*.swo
+*.swp
+*.xml
+*.csv
+
