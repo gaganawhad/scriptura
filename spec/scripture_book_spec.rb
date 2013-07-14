@@ -27,4 +27,10 @@ describe ScriptureBook do
       ScriptureBook.new(19).number_of_chapters.should == 150
     end
   end
+
+  describe '#number' do 
+    it 'returns the serial number of the book' do
+      ScriptureBook.new(19).number.should == 19
+    end
+  end
 end
