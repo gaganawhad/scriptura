@@ -8,5 +8,12 @@ class ScriptureChapter
     raise 'book number should be within 1-66' if @chapter_hash.nil?
   end
 
+  def number
+    @chapter_hash['number']
+  end
+
+  def number_of_verses
+    @chapter_hash['verses']
+  end
 end
 

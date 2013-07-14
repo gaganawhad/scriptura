@@ -18,4 +18,16 @@ describe ScriptureChapter do
       lambda { ScriptureChapter.new(32, 2) }.should_not raise_error
     end
   end
+
+  describe '#number' do
+    it 'returns the chapter number of the chapter' do 
+      ScriptureChapter.new(19, 12).number.should == 12
+    end
+  end
+
+  describe '#number_of_verses' do
+    it 'returns the number of versres in a chapter' do 
+      ScriptureChapter.new(19, 119).number_of_verses.should == 176
+    end
+  end
 end
