@@ -1,6 +1,6 @@
 class ScriptureBook
   def initialize(book_number)
-    raise ArgumentError, 'book number should be convertable to integer' unless book_number.respond_to?(:to_i)
+    raise ArgumentError, 'book number cannot be converted to an integer' unless book_number.respond_to?(:to_i)
     raise 'book number should be within 1-66' unless (1..66).cover?(book_number.to_i)
     @book_hash ||= SCRIPTURE_META.find{|book| book['number'] == book_number.to_i}
   end
