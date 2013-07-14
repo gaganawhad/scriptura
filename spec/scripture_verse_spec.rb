@@ -5,7 +5,7 @@ describe ScriptureVerse do
     it 'raises an error if either of the arugments cannot be converted to an integer' do
       lambda { ScriptureVerse.new(:a1, 1, 4) }.should raise_error(ArgumentError)
       lambda { ScriptureVerse.new(3, :asdf, 4) }.should raise_error(ArgumentError)
-      lambda { ScriptureVerse.new(3, 2, nil) }.should raise_error(ArgumentError)
+      lambda { ScriptureVerse.new(3, 2, :four) }.should raise_error(ArgumentError)
     end
 
     it 'raises an error if the book number is not within 1-66' do
