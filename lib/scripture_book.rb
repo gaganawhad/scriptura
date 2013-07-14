@@ -16,4 +16,8 @@ class ScriptureBook
   def number
     @book_hash['number']
   end
+
+  def to_hash
+    @book_hash
+  end
 end
