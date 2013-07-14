@@ -1,4 +1,6 @@
 class ScriptureChapter
+  attr_accessor :scripture_book
+
   def initialize book_number, chapter_number
     @scripture_book = ScriptureBook.new(book_number)
     raise ArgumentError, 'chapter number cannot be converted to an integer' unless chapter_number.respond_to?(:to_i)

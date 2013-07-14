@@ -3,6 +3,7 @@ require 'spec_helper'
 describe ScriptureVerse do 
   describe '#initialize' do 
     it 'raises an error if either of the arugments cannot be converted to an integer' do
+
       lambda { ScriptureVerse.new(:a1, 1, 4) }.should raise_error(ArgumentError)
       lambda { ScriptureVerse.new(3, :asdf, 4) }.should raise_error(ArgumentError)
       lambda { ScriptureVerse.new(3, 2, :four) }.should raise_error(ArgumentError)
@@ -23,6 +24,22 @@ describe ScriptureVerse do
 
     it 'does not raise an error when the verse exists' do
       lambda { ScriptureVerse.new(32, 2, 2) }.should_not raise_error
+    end
+  end
+
+  describe '#normalize' do
+    context 'it converts a scripture verse to a normalized unique value over the range of scripture verses' do
+      it "returns 1,001,001 for scripture verse referring to Genesis 1:1 " do
+        ScriptureVerse.new(1,1,1).normalize.should == 1001001
+      end
+
+      it "returns 66,022,021 for scripture verse referring to Genesis 1:1 " do
+        ScriptureVerse.new(66,22,21).normalize.should == 66022021
+      end
+
+      it "returns 19,119,176 for scripture verse referring to Psalm 119:176 " do
+        ScriptureVerse.new(19,119,176).normalize.should == 19119176
+      end
     end
   end
 end
