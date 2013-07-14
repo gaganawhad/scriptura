@@ -5,7 +5,7 @@ class ScriptureChapter
     raise 'book number should be within 1-66' unless (1..66).cover?(book_number.to_i)
     @scripture_book = ScriptureBook.new(book_number)
     @chapter_hash = @scripture_book.to_hash['chapters'].find{|chapter| chapter['number'] == chapter_number.to_i}
-    raise 'book number should be within 1-66' if @chapter_hash.nil?
+    raise 'chaper does not exist' if @chapter_hash.nil?
   end
 
   def number
