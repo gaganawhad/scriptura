@@ -21,4 +21,10 @@ describe ScriptureBook do
       ScriptureBook.new(1).name.should == 'Genesis'
     end
   end
+
+  describe '#number_of_chapters' do 
+    it 'returns the number of chapters' do
+      ScriptureBook.new(19).number_of_chapters.should == 150
+    end
+  end
 end

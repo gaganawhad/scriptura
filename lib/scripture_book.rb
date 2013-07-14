@@ -8,4 +8,8 @@ class ScriptureBook
   def name
     @book_hash["name"]
   end
+
+  def number_of_chapters
+    @book_hash['chapters'].count
+  end
 end
