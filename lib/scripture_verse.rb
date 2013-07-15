@@ -12,6 +12,10 @@ class ScriptureVerse
     @scripture_chapter.scripture_book
   end
 
+  def number
+    @verse_number
+  end
+
   def normalize
     scripture_book.number * 1000000 + scripture_chapter.number * 1000 + @verse_number
   end

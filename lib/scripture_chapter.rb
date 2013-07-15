@@ -16,5 +16,21 @@ class ScriptureChapter
   def number_of_verses
     @chapter_hash['verses']
   end
+
+  def first_verse
+    @first_verse = ScriptureVerse.new(scripture_book.number, self.number, 1)
+  end
+
+  def last_verse
+    @first_verse = ScriptureVerse.new(scripture_book.number, self.number, self.number_of_verses)
+  end
+
+  def first_verse_number
+    first_verse.number
+  end
+
+  def last_verse_number
+    last_verse.number
+  end
 end
 

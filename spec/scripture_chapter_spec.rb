@@ -32,4 +32,32 @@ describe ScriptureChapter do
       ScriptureChapter.new(19, 119).number_of_verses.should == 176
     end
   end
+
+  describe '#first_verse' do 
+    it 'returns the first ScriptureVerse of that ScriptureChapter' do
+      @first_verse = ScriptureChapter.new(19, 119).first_verse
+      @first_verse.should be_an_instance_of ScriptureVerse
+      @first_verse.number.should == 1
+    end
+  end
+
+  describe '#last_verse' do 
+    it 'returns the last ScriptureVerse of that ScriptureChapter' do
+      @last_verse = ScriptureChapter.new(19, 119).last_verse
+      @last_verse.should be_an_instance_of ScriptureVerse
+      @last_verse.number.should == 176
+    end
+  end
+
+  describe '#first_verse_number' do 
+    it 'returns the first ScriptureVerse number of that ScriptureChapter' do
+      ScriptureChapter.new(19, 119).first_verse_number.should == 1
+    end
+  end
+
+  describe '#last_verse_number' do 
+    it 'returns the last ScriptureVerse number of that ScriptureChapter' do
+      ScriptureChapter.new(19, 119).last_verse_number.should == 176
+    end
+  end
 end
