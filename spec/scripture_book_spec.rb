@@ -33,4 +33,32 @@ describe ScriptureBook do
       ScriptureBook.new(19).number.should == 19
     end
   end
+
+  describe '#first_chapter' do 
+    it 'returns the first ScriptureChapter of that ScriptureBook' do
+      @first_chapter = ScriptureBook.new(19).first_chapter
+      @first_chapter.should be_an_instance_of ScriptureChapter
+      @first_chapter.number.should == 1
+    end
+  end
+
+  describe '#last_chapter' do 
+    it 'returns the last ScriptureChapter of that ScriptureBook' do
+      @last_chapter = ScriptureBook.new(19).last_chapter
+      @last_chapter.should be_an_instance_of ScriptureChapter
+      @last_chapter.number.should == 150
+    end
+  end
+
+  describe '#first_chapter_number' do 
+    it 'returns the first ScriptureChapter number of that ScriptureBook' do
+      ScriptureBook.new(19).first_chapter_number.should == 1
+    end
+  end
+
+  describe '#last_chapter_number' do 
+    it 'returns the last ScriptureChapter number of that ScriptureBook' do
+      ScriptureBook.new(19).last_chapter_number.should == 150
+    end
+  end
 end

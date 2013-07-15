@@ -17,6 +17,22 @@ class ScriptureBook
     @book_hash['number']
   end
 
+  def first_chapter
+    @first_chapter ||=ScriptureChapter.new(self.number, 1)
+  end
+
+  def last_chapter
+    @last_chapter ||=ScriptureChapter.new(self.number, self.number_of_chapters)
+  end
+
+  def first_chapter_number
+    first_chapter.number
+  end
+
+  def last_chapter_number
+    last_chapter.number
+  end
+
   def to_hash
     @book_hash
   end
