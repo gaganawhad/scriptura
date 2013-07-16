@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = %q{https://www.github.com/gaganawhad/scripture-meta}
 
   gem.files         = `git ls-files`.split($\)
-  gem.files = Dir["{app,config,db,lib}/**/*"] + ["README.md"]
+  gem.files = Dir["{app,config,db,lib}/**/*"] + ["README.md", "LICENSE"]
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "scripture-meta"
