@@ -1,3 +1,8 @@
+PATH
+  remote: .
+  specs:
+    scripture-meta (0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -16,3 +21,4 @@ PLATFORMS
 
 DEPENDENCIES
   rspec
+  scripture-meta!
