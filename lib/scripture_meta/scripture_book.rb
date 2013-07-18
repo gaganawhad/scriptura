@@ -6,7 +6,7 @@ class ScriptureBook
   end
 
   def self.find_by_name name
-    self.new(SCRIPTURE_META.find{|book| book['name'] = name}['number'])
+    self.new(SCRIPTURE_META.find{|book| book['name'] == name}['number'])
   end
 
   def name

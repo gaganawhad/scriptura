@@ -18,9 +18,9 @@ describe ScriptureBook do
 
   describe '.find_by_name' do 
     it 'initializes the ScriptureBook by the name' do
-      @scripture_book = ScriptureBook.find_by_name('Genesis')
+      @scripture_book = ScriptureBook.find_by_name('Romans')
       @scripture_book.should be_an_instance_of(ScriptureBook)
-      @scripture_book.number.should == 1
+      @scripture_book.number.should == 45
     end
   end
 
