@@ -1,5 +1,6 @@
 class ScriptureVerse
   attr_accessor :scripture_chapter
+  attr_accessor :number
 
   def initialize book_number, chapter_number, verse_number
     @scripture_chapter = ScriptureChapter.new(book_number, chapter_number)
@@ -12,11 +13,7 @@ class ScriptureVerse
     @scripture_chapter.scripture_book
   end
 
-  def number
-    @verse_number
-  end
-
   def normalize
-    scripture_book.number * 1000000 + scripture_chapter.number * 1000 + @verse_number
+    scripture_book.number * 1000000 + scripture_chapter.number * 1000 + @number
   end
 end
