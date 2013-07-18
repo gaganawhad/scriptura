@@ -5,6 +5,10 @@ class ScriptureBook
     @number = number.to_i
   end
 
+  def self.find_by_name name
+    self.new(SCRIPTURE_META.find{|book| book['name'] = name}['number'])
+  end
+
   def name
     book_hash['name']
   end
