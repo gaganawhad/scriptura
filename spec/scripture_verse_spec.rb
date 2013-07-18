@@ -25,6 +25,10 @@ describe ScriptureVerse do
     it 'does not raise an error when the verse exists' do
       lambda { ScriptureVerse.new(32, 2, 2) }.should_not raise_error
     end
+
+    it 'stores the verse number as in integer' do 
+      ScriptureVerse.new('1', '2', '3').number.should == 3
+    end
   end
 
   describe '#normalize' do
@@ -40,6 +44,12 @@ describe ScriptureVerse do
       it "returns 19,119,176 for scripture verse referring to Psalm 119:176 " do
         ScriptureVerse.new(19,119,176).normalize.should == 19119176
       end
+    end
+  end
+
+  describe '#number' do 
+    it 'returns the scripture of the verse' do 
+      ScriptureVerse.new(12, 1, 8).number.should == 8
     end
   end
 end
