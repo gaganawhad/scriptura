@@ -6,7 +6,9 @@ class ScriptureBook
   end
 
   def self.find_by_name name
-    self.new(SCRIPTURE_META.find{|book| book['name'] == name}['number'])
+    hash = SCRIPTURE_META.find{|book| book['name'] == name}
+    raise "Book by the name #{name} was not found! Check if there was a spelling error.. or try initializing it with a book number" if hash.nil?
+    self.new(hash['number'])
   end
 
   def name

@@ -22,6 +22,10 @@ describe ScriptureBook do
       @scripture_book.should be_an_instance_of(ScriptureBook)
       @scripture_book.number.should == 45
     end
+
+    it 'returns a helpful message when it doesn not find a book by the string passed to it' do 
+      lambda { ScriptureBook.find_by_name('does not exist') }.should raise_error
+    end
   end
 
   describe '#book_name' do
