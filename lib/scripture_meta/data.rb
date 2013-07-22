@@ -3,6 +3,7 @@ SCRIPTURE_META = begin
     "abbr"=>"GEN",
     "name"=>"Genesis",
     "string_id"=>"genesis",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>31},
       {"number"=>2, "verses"=>25},
@@ -58,6 +59,7 @@ SCRIPTURE_META = begin
     "abbr"=>"EXO",
     "name"=>"Exodus",
     "string_id"=>"exodus",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>22},
       {"number"=>2, "verses"=>25},
@@ -103,6 +105,7 @@ SCRIPTURE_META = begin
     "abbr"=>"LEV",
     "name"=>"Leviticus",
     "string_id"=>"leviticus",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>17},
       {"number"=>2, "verses"=>16},
@@ -135,6 +138,7 @@ SCRIPTURE_META = begin
     "abbr"=>"NUM",
     "name"=>"Numbers",
     "string_id"=>"numbers",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>54},
       {"number"=>2, "verses"=>34},
@@ -176,6 +180,7 @@ SCRIPTURE_META = begin
     "abbr"=>"DEU",
     "name"=>"Deuteronomy",
     "string_id"=>"deuteronomy",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>46},
       {"number"=>2, "verses"=>37},
@@ -215,6 +220,7 @@ SCRIPTURE_META = begin
     "abbr"=>"JOS",
     "name"=>"Joshua",
     "string_id"=>"joshua",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>18},
       {"number"=>2, "verses"=>24},
@@ -244,6 +250,7 @@ SCRIPTURE_META = begin
     "abbr"=>"JDG",
     "name"=>"Judges",
     "string_id"=>"judges",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>36},
       {"number"=>2, "verses"=>23},
@@ -270,6 +277,7 @@ SCRIPTURE_META = begin
     "abbr"=>"RUT",
     "name"=>"Ruth",
     "string_id"=>"ruth",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>22},
       {"number"=>2, "verses"=>23},
@@ -279,6 +287,7 @@ SCRIPTURE_META = begin
     "abbr"=>"1SA",
     "name"=>"1 Samuel",
     "string_id"=>"1-samuel",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>28},
       {"number"=>2, "verses"=>36},
@@ -315,6 +324,7 @@ SCRIPTURE_META = begin
     "abbr"=>"2SA",
     "name"=>"2 Samuel",
     "string_id"=>"2-samuel",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>27},
       {"number"=>2, "verses"=>32},
@@ -344,6 +354,7 @@ SCRIPTURE_META = begin
     "abbr"=>"1KG",
     "name"=>"1 Kings",
     "string_id"=>"1-kings",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>53},
       {"number"=>2, "verses"=>46},
@@ -371,6 +382,7 @@ SCRIPTURE_META = begin
     "abbr"=>"2KG",
     "name"=>"2 Kings",
     "string_id"=>"2-kings",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>18},
       {"number"=>2, "verses"=>25},
@@ -401,6 +413,7 @@ SCRIPTURE_META = begin
     "abbr"=>"1KR",
     "name"=>"1 Chronicles",
     "string_id"=>"1-chronicles",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>54},
       {"number"=>2, "verses"=>55},
@@ -435,6 +448,7 @@ SCRIPTURE_META = begin
     "abbr"=>"2KR",
     "name"=>"2 Chronicles",
     "string_id"=>"2-chronicles",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>17},
       {"number"=>2, "verses"=>18},
@@ -476,6 +490,7 @@ SCRIPTURE_META = begin
     "abbr"=>"EZR",
     "name"=>"Ezra",
     "string_id"=>"ezra",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>11},
       {"number"=>2, "verses"=>70},
@@ -491,6 +506,7 @@ SCRIPTURE_META = begin
     "abbr"=>"NEH",
     "name"=>"Nehemiah",
     "string_id"=>"nehemiah",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>11},
       {"number"=>2, "verses"=>20},
@@ -509,6 +525,7 @@ SCRIPTURE_META = begin
     "abbr"=>"EST",
     "name"=>"Esther",
     "string_id"=>"esther",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>22},
       {"number"=>2, "verses"=>23},
@@ -524,6 +541,7 @@ SCRIPTURE_META = begin
     "abbr"=>"JOB",
     "name"=>"Job",
     "string_id"=>"job",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>22},
       {"number"=>2, "verses"=>13},
@@ -571,6 +589,7 @@ SCRIPTURE_META = begin
     "abbr"=>"PSA",
     "name"=>"Psalms",
     "string_id"=>"psalms",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>6},
       {"number"=>2, "verses"=>12},
@@ -726,6 +745,7 @@ SCRIPTURE_META = begin
     "abbr"=>"PRO",
     "name"=>"Proverbs",
     "string_id"=>"proverbs",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>33},
       {"number"=>2, "verses"=>22},
@@ -762,6 +782,7 @@ SCRIPTURE_META = begin
     "abbr"=>"ECC",
     "name"=>"Ecclesiastes",
     "string_id"=>"ecclesiastes",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>18},
       {"number"=>2, "verses"=>26},
@@ -779,6 +800,7 @@ SCRIPTURE_META = begin
     "abbr"=>"SO",
     "name"=>"Song of Solomon",
     "string_id"=>"song-of-solomon",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>17},
       {"number"=>2, "verses"=>17},
@@ -792,6 +814,7 @@ SCRIPTURE_META = begin
     "abbr"=>"ISA",
     "name"=>"Isaiah",
     "string_id"=>"isaiah",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>31},
       {"number"=>2, "verses"=>22},
@@ -863,6 +886,7 @@ SCRIPTURE_META = begin
     "abbr"=>"JER",
     "name"=>"Jeremiah",
     "string_id"=>"jeremiah",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>19},
       {"number"=>2, "verses"=>37},
@@ -920,6 +944,7 @@ SCRIPTURE_META = begin
     "abbr"=>"LAM",
     "name"=>"Lamentations",
     "string_id"=>"lamentations",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>22},
       {"number"=>2, "verses"=>22},
@@ -930,6 +955,7 @@ SCRIPTURE_META = begin
     "abbr"=>"EZE",
     "name"=>"Ezekiel",
     "string_id"=>"ezekiel",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>28},
       {"number"=>2, "verses"=>10},
@@ -983,6 +1009,7 @@ SCRIPTURE_META = begin
     "abbr"=>"DAN",
     "name"=>"Daniel",
     "string_id"=>"daniel",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>21},
       {"number"=>2, "verses"=>49},
@@ -1000,6 +1027,7 @@ SCRIPTURE_META = begin
     "abbr"=>"HOS",
     "name"=>"Hosea",
     "string_id"=>"hosea",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>11},
       {"number"=>2, "verses"=>23},
@@ -1019,6 +1047,7 @@ SCRIPTURE_META = begin
     "abbr"=>"JOE",
     "name"=>"Joel",
     "string_id"=>"joel",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>20},
       {"number"=>2, "verses"=>32},
@@ -1027,6 +1056,7 @@ SCRIPTURE_META = begin
     "abbr"=>"AMO",
     "name"=>"Amos",
     "string_id"=>"amos",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>15},
       {"number"=>2, "verses"=>16},
@@ -1046,6 +1076,7 @@ SCRIPTURE_META = begin
     "abbr"=>"JON",
     "name"=>"Jonah",
     "string_id"=>"jonah",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>17},
       {"number"=>2, "verses"=>10},
@@ -1055,6 +1086,7 @@ SCRIPTURE_META = begin
     "abbr"=>"MIC",
     "name"=>"Micah",
     "string_id"=>"micah",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>16},
       {"number"=>2, "verses"=>13},
@@ -1067,6 +1099,7 @@ SCRIPTURE_META = begin
     "abbr"=>"NAH",
     "name"=>"Nahum",
     "string_id"=>"nahum",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>15},
       {"number"=>2, "verses"=>13},
@@ -1075,6 +1108,7 @@ SCRIPTURE_META = begin
     "abbr"=>"HAB",
     "name"=>"Habakkuk",
     "string_id"=>"habakkuk",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>17},
       {"number"=>2, "verses"=>20},
@@ -1083,6 +1117,7 @@ SCRIPTURE_META = begin
     "abbr"=>"ZEP",
     "name"=>"Zephaniah",
     "string_id"=>"zephaniah",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>18},
       {"number"=>2, "verses"=>15},
@@ -1096,6 +1131,7 @@ SCRIPTURE_META = begin
     "abbr"=>"ZEC",
     "name"=>"Zechariah",
     "string_id"=>"zechariah",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>21},
       {"number"=>2, "verses"=>13},
@@ -1115,6 +1151,7 @@ SCRIPTURE_META = begin
     "abbr"=>"MAL",
     "name"=>"Malachi",
     "string_id"=>"malachi",
+    "testament"=>"old",
     "chapters"=>
     [{"number"=>1, "verses"=>14},
       {"number"=>2, "verses"=>17},
@@ -1124,6 +1161,7 @@ SCRIPTURE_META = begin
     "abbr"=>"MAT",
     "name"=>"Matthew",
     "string_id"=>"matthew",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>25},
       {"number"=>2, "verses"=>23},
@@ -1157,6 +1195,7 @@ SCRIPTURE_META = begin
     "abbr"=>"MAR",
     "name"=>"Mark",
     "string_id"=>"mark",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>45},
       {"number"=>2, "verses"=>28},
@@ -1178,6 +1217,7 @@ SCRIPTURE_META = begin
     "abbr"=>"LUK",
     "name"=>"Luke",
     "string_id"=>"luke",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>80},
       {"number"=>2, "verses"=>52},
@@ -1207,6 +1247,7 @@ SCRIPTURE_META = begin
     "abbr"=>"JOH",
     "name"=>"John",
     "string_id"=>"john",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>51},
       {"number"=>2, "verses"=>25},
@@ -1233,6 +1274,7 @@ SCRIPTURE_META = begin
     "abbr"=>"ACT",
     "name"=>"Acts",
     "string_id"=>"acts",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>26},
       {"number"=>2, "verses"=>47},
@@ -1266,6 +1308,7 @@ SCRIPTURE_META = begin
     "abbr"=>"ROM",
     "name"=>"Romans",
     "string_id"=>"romans",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>32},
       {"number"=>2, "verses"=>29},
@@ -1287,6 +1330,7 @@ SCRIPTURE_META = begin
     "abbr"=>"1CO",
     "name"=>"1 Corinthians",
     "string_id"=>"1-corinthians",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>31},
       {"number"=>2, "verses"=>16},
@@ -1308,6 +1352,7 @@ SCRIPTURE_META = begin
     "abbr"=>"2CO",
     "name"=>"2 Corinthians",
     "string_id"=>"2-corinthians",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>24},
       {"number"=>2, "verses"=>17},
@@ -1326,6 +1371,7 @@ SCRIPTURE_META = begin
     "abbr"=>"GAL",
     "name"=>"Galatians",
     "string_id"=>"galatians",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>24},
       {"number"=>2, "verses"=>21},
@@ -1337,6 +1383,7 @@ SCRIPTURE_META = begin
     "abbr"=>"EPH",
     "name"=>"Ephesians",
     "string_id"=>"ephesians",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>23},
       {"number"=>2, "verses"=>22},
@@ -1348,6 +1395,7 @@ SCRIPTURE_META = begin
     "abbr"=>"PHI",
     "name"=>"Philippians",
     "string_id"=>"philippians",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>30},
       {"number"=>2, "verses"=>30},
@@ -1357,6 +1405,7 @@ SCRIPTURE_META = begin
     "abbr"=>"COL",
     "name"=>"Colossians",
     "string_id"=>"colossians",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>29},
       {"number"=>2, "verses"=>23},
@@ -1366,6 +1415,7 @@ SCRIPTURE_META = begin
     "abbr"=>"1TH",
     "name"=>"1 Thessalonians",
     "string_id"=>"1-thessalonians",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>10},
       {"number"=>2, "verses"=>20},
@@ -1376,6 +1426,7 @@ SCRIPTURE_META = begin
     "abbr"=>"2TH",
     "name"=>"2 Thessalonians",
     "string_id"=>"2-thessalonians",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>12},
       {"number"=>2, "verses"=>17},
@@ -1384,6 +1435,7 @@ SCRIPTURE_META = begin
     "abbr"=>"1TI",
     "name"=>"1 Timothy",
     "string_id"=>"1-timothy",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>20},
       {"number"=>2, "verses"=>15},
@@ -1395,6 +1447,7 @@ SCRIPTURE_META = begin
     "abbr"=>"2TI",
     "name"=>"2 Timothy",
     "string_id"=>"2-timothy",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>18},
       {"number"=>2, "verses"=>26},
@@ -1404,6 +1457,7 @@ SCRIPTURE_META = begin
     "abbr"=>"TIT",
     "name"=>"Titus",
     "string_id"=>"titus",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>16},
       {"number"=>2, "verses"=>15},
@@ -1417,6 +1471,7 @@ SCRIPTURE_META = begin
     "abbr"=>"HEB",
     "name"=>"Hebrews",
     "string_id"=>"hebrews",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>14},
       {"number"=>2, "verses"=>18},
@@ -1435,6 +1490,7 @@ SCRIPTURE_META = begin
     "abbr"=>"JAM",
     "name"=>"James",
     "string_id"=>"james",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>27},
       {"number"=>2, "verses"=>26},
@@ -1445,6 +1501,7 @@ SCRIPTURE_META = begin
     "abbr"=>"1PE",
     "name"=>"1 Peter",
     "string_id"=>"1-peter",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>25},
       {"number"=>2, "verses"=>25},
@@ -1455,6 +1512,7 @@ SCRIPTURE_META = begin
     "abbr"=>"2PE",
     "name"=>"2 Peter",
     "string_id"=>"2-peter",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>21},
       {"number"=>2, "verses"=>22},
@@ -1463,6 +1521,7 @@ SCRIPTURE_META = begin
     "abbr"=>"1JO",
     "name"=>"1 John",
     "string_id"=>"1-john",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>10},
       {"number"=>2, "verses"=>29},
@@ -1488,6 +1547,7 @@ SCRIPTURE_META = begin
     "abbr"=>"REV",
     "name"=>"Revelation",
     "string_id"=>"revelation",
+    "testament"=>"new",
     "chapters"=>
     [{"number"=>1, "verses"=>20},
       {"number"=>2, "verses"=>29},
@@ -1512,8 +1572,3 @@ SCRIPTURE_META = begin
       {"number"=>21, "verses"=>27},
       {"number"=>22, "verses"=>21}]}]
 end
-
-
-
-
-
