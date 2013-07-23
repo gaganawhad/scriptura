@@ -24,6 +24,25 @@ There are four main classes in this library:
   - ScriptureChapter
   - ScriptureVerse
 
+###ScriptureMeta
+
+The way it is written, this is actually a module that encapsulates methods that scope the entire bible
+```ruby
+> ScriptureMeta.book_names
+ => ["Genesis", "Exodus", "Leviticus", ... , "Revelation"]
+
+ ```
+###ScriptureBook
+
+This is a ruby class that gets initialized by passing in the book number.
+
+```ruby
+> sb = ScriptureBook.new(1)
+ => #<ScriptureBook:0x007fcb1b80f7f8 @number=1> 
+> sb.name
+  => "Genesis" 
+```
+
 Feel free to browse the code / test to get a sense of the API
 
 ```ruby
