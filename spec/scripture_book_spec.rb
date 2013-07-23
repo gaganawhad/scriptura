@@ -28,6 +28,18 @@ describe ScriptureBook do
     end
   end
 
+  describe '.find' do 
+    it "finds the book when a 'parameterised' string is passed to it" do
+      @scripture_book = ScriptureBook.find('1-corinthians')
+      @scripture_book.should be_an_instance_of(ScriptureBook)
+      @scripture_book.number.should == 46
+    end
+
+    it 'returns a helpful message when it does not find a book by the string id passed to it' do 
+      lambda { ScriptureBook.find('wrong-id') }.should raise_error
+    end
+  end
+
   describe '#book_name' do
     it 'prints the name of the book' do
       ScriptureBook.new(1).name.should == 'Genesis'

@@ -11,6 +11,12 @@ class ScriptureBook
     self.new(hash['number'])
   end
 
+  def self.find string_id
+    hash = SCRIPTURE_META.find{|book| book['string_id'] == string_id}
+    raise "Book by the string_id #{string_id} was not found! Check if there was a spelling error.. or try initializing it with a book number" if hash.nil?
+    self.new(hash['number'])
+  end
+
   def name
     book_hash['name']
   end
