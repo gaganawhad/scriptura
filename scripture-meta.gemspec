@@ -4,8 +4,8 @@ $:.push File.expand_path("../lib", __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Gagan Awhad"]
   gem.email         = ["gagan.a.awhad@gmail.com"]
-  gem.description   = %q{Ruby gem that provides logical operations on scripture meta-data}
-  gem.summary       = %q{Ruby gem that provides logical operations on scripture meta-data}
+  gem.description   = %q{This is a ruby library that provides operations related with meta information about the Bible}
+  gem.summary       = %q{This is a ruby library that provides operations related with meta information about the Bible}
   gem.homepage      = %q{https://www.github.com/gaganawhad/scripture-meta}
 
   gem.files         = `git ls-files`.split($\)
