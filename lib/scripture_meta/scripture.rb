@@ -14,4 +14,8 @@ module ScriptureMeta
     end
     books
   end
+
+  def self.books
+    old_testament_books + new_testament_books
+  end
 end
