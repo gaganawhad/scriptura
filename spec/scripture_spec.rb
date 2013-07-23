@@ -24,4 +24,14 @@ describe ScriptureMeta do
       @result.map(&:number).should == (1..66).to_a
     end
   end
+
+  describe '.book_names' do
+    it 'returns all the books in an array' do 
+      @result = ScriptureMeta.book_names
+      @result.should be_instance_of(Array)
+      @result[0].should == 'Genesis'
+      @result[1].should == 'Exodus'
+      @result[65].should == 'Revelation'
+    end
+  end
 end

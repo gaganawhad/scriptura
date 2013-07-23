@@ -18,4 +18,8 @@ module ScriptureMeta
   def self.books
     old_testament_books + new_testament_books
   end
+
+  def self.book_names
+    books.map(&:name)
+  end
 end
