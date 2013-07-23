@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-There are four mmain classes in this library: 
+There are four main classes in this library: 
   - ScriptureMeta
   - ScriptureBook
   - ScriptureChapter
