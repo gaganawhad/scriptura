@@ -22,6 +22,10 @@ module ScriptureMeta
       book_hash['name']
     end
 
+    def abbr_name
+      book_hash['abbr']
+    end
+
     def number_of_chapters
       book_hash['chapters'].count
     end

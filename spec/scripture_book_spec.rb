@@ -86,5 +86,11 @@ module ScriptureMeta
         ScriptureBook.new(19).last_chapter_number.should == 150
       end
     end
+
+    describe '#abbr_name' do 
+      it 'returns the abbreviation of the name of the scripture book' do 
+        ScriptureBook.new(19).abbr_name.should == 'PSA'
+      end
+    end
   end
 end
