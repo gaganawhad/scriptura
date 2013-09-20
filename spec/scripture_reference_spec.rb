@@ -101,5 +101,37 @@ module ScriptureMeta
         @scripture_reference.spans_single_verse?.should == false
       end
     end
+
+    describe '#to_s' do 
+      it "returns 'Genesis' when it spans the entire book of Genesis" do
+        @scripture_reference = ScriptureReference.new(ScriptureVerse.new(1, 1, 1), ScriptureVerse.new(1, 50, 26))
+        @scripture_reference.to_s.should == "Genesis"
+      end
+
+      it "returns 'Gen 1' when it spans the entire chapter of Genesis 1" do
+        @scripture_reference = ScriptureReference.new(ScriptureVerse.new(1, 1, 1), ScriptureVerse.new(1, 1, 31))
+        @scripture_reference.to_s.should == "Genesis 1"
+      end
+
+      it "returns 'Genesis 1:1' when it only covers one verse" do
+        @scripture_reference = ScriptureReference.new(ScriptureVerse.new(1, 1, 1), ScriptureVerse.new(1, 1, 1))
+        @scripture_reference.to_s.should == "Genesis 1:1"
+      end
+
+      it "returns 'Genesis 1:1-2'" do
+        @scripture_reference = ScriptureReference.new(ScriptureVerse.new(1, 1, 1), ScriptureVerse.new(1, 1, 2))
+        @scripture_reference.to_s.should == "Genesis 1:1-2"
+      end
+
+      it "returns 'Genesis 1:1 - 3:2'" do
+        @scripture_reference = ScriptureReference.new(ScriptureVerse.new(1, 1, 1), ScriptureVerse.new(1, 3, 2))
+        @scripture_reference.to_s.should == "Genesis 1:1 - 3:2"
+      end
+
+      it "returns 'Genesis 1:1 - Exodus 3:2'" do
+        @scripture_reference = ScriptureReference.new(ScriptureVerse.new(1, 1, 1), ScriptureVerse.new(2, 3, 2))
+        @scripture_reference.to_s.should == "Genesis 1:1 - Exodus 3:2"
+      end
+    end
   end
 end

@@ -35,5 +35,22 @@ module ScriptureMeta
       within_same_chapter? &&
       start_verse.number == end_verse.number
     end
+
+    def to_s
+      case 
+      when self.spans_entire_book?
+        start_verse.scripture_book.name
+      when self.spans_entire_chapter?
+        "#{start_verse.scripture_book.name} #{start_verse.scripture_chapter.number}"
+      when self.spans_single_verse?
+        "#{start_verse.scripture_book.name} #{start_verse.scripture_chapter.number}:#{start_verse.number}"
+      when within_same_chapter?
+        "#{start_verse.scripture_book.name} #{start_verse.scripture_chapter.number}:#{start_verse.number}-#{end_verse.number}"
+      when within_same_book?
+        "#{start_verse.scripture_book.name} #{start_verse.scripture_chapter.number}:#{start_verse.number} - #{end_verse.scripture_chapter.number}:#{end_verse.number}"
+      else
+        "#{start_verse.scripture_book.name} #{start_verse.scripture_chapter.number}:#{start_verse.number} - #{end_verse.scripture_book.name} #{end_verse.scripture_chapter.number}:#{end_verse.number}"
+      end
+    end
   end
 end
