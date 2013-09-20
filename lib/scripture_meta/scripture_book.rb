@@ -53,6 +53,10 @@ module ScriptureMeta
     def to_hash
       book_hash
     end
+
+    def string_id
+      book_hash['string_id']
+    end
     
     private
 

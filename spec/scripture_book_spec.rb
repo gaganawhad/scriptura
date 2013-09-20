@@ -92,5 +92,11 @@ module ScriptureMeta
         ScriptureBook.new(19).abbr_name.should == 'PSA'
       end
     end
+
+    describe '#string_id' do 
+      it "returns a human readable, pretty, string slug for the book in question" do 
+        ScriptureBook.new(19).string_id.should == 'psalms'
+      end
+    end
   end
 end
