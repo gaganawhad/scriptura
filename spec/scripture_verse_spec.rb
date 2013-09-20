@@ -30,7 +30,7 @@ describe ScriptureVerse do
       ScriptureVerse.new('1', '2', '3').number.should == 3
     end
 
-    it 'initializes scripture verse to Gen:1:1 when 1001001 is passed to it' do 
+    it 'initializes scripture verse to Gen 1:1 when 1001001 is passed to it' do 
       @scripture_verse = ScriptureVerse.new(1001001)
       @scripture_verse.should be_a(ScriptureVerse)
       @scripture_verse.scripture_book.number.should == 1
@@ -38,7 +38,7 @@ describe ScriptureVerse do
       @scripture_verse.number.should == 1
     end
 
-    it 'initializes scripture verse to Psalm:119:176 when 19119176 is passed to it' do 
+    it 'initializes scripture verse to Psalm 119:176 when 19119176 is passed to it' do 
       @scripture_verse = ScriptureVerse.new(19119176)
       @scripture_verse.should be_a(ScriptureVerse)
       @scripture_verse.scripture_book.number.should == 19
@@ -53,7 +53,7 @@ describe ScriptureVerse do
         ScriptureVerse.new(1,1,1).normalize.should == 1001001
       end
 
-      it "returns 66,022,021 for scripture verse referring to Genesis 1:1 " do
+      it "returns 66,022,021 for scripture verse referring to Rev 22:21 " do
         ScriptureVerse.new(66,22,21).normalize.should == 66022021
       end
 
