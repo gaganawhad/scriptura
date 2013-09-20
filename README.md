@@ -23,6 +23,7 @@ There are four main classes in this library:
   - ScriptureBook
   - ScriptureChapter
   - ScriptureVerse
+  - ScriptureReference
 
 ###ScriptureMeta
 
