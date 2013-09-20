@@ -1,4 +1,5 @@
-SCRIPTURE_META = begin
+module ScriptureMeta
+ METADATA = begin
   [{"number"=>1,
     "abbr"=>"GEN",
     "name"=>"Genesis",
@@ -1571,4 +1572,5 @@ SCRIPTURE_META = begin
       {"number"=>20, "verses"=>15},
       {"number"=>21, "verses"=>27},
       {"number"=>22, "verses"=>21}]}]
+  end
 end
