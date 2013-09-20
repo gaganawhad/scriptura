@@ -2,6 +2,40 @@ require 'spec_helper'
 
 module ScriptureMeta 
   describe ScriptureReference do 
+    describe "#within_same_book?" do 
+      it "returns a true when the start verse is Gen 1:1 and end verse is Gen 50:26" do 
+        @scripture_reference = ScriptureReference.new(ScriptureVerse.new(1, 1, 1), ScriptureVerse.new(1, 50, 26))
+        @scripture_reference.within_same_book?.should == true
+      end
+
+      it "returns a true when the start verse is Gen 3:1 and end verse is Gen 3:5" do 
+        @scripture_reference = ScriptureReference.new(ScriptureVerse.new(1, 3, 1), ScriptureVerse.new(1, 3, 5))
+        @scripture_reference.within_same_book?.should == true
+      end
+
+      it "returns a true when the start verse is Gen 1:1 and end verse is Exo 1:1" do 
+        @scripture_reference = ScriptureReference.new(ScriptureVerse.new(1, 1, 1), ScriptureVerse.new(2, 1, 1))
+        @scripture_reference.within_same_book?.should == false
+      end
+    end
+
+    describe "#within_same_chapter?" do 
+      it "returns a true when the start verse is Gen 1:1 and end verse is Gen 1:12" do 
+        @scripture_reference = ScriptureReference.new(ScriptureVerse.new(1, 1, 1), ScriptureVerse.new(1, 1, 12))
+        @scripture_reference.within_same_book?.should == true
+      end
+
+      it "returns a true when the start verse is Gen 3:1 and end verse is Gen 3:5" do 
+        @scripture_reference = ScriptureReference.new(ScriptureVerse.new(1, 3, 1), ScriptureVerse.new(1, 3, 5))
+        @scripture_reference.within_same_book?.should == true
+      end
+
+      it "returns a true when the start verse is Gen 1:1 and end verse is Exo 1:1" do 
+        @scripture_reference = ScriptureReference.new(ScriptureVerse.new(1, 1, 1), ScriptureVerse.new(2, 1, 1))
+        @scripture_reference.within_same_book?.should == false
+      end
+    end
+
     describe "#spans_entire_book?" do 
       it "returns a true when the start verse is Gen 1:1 and end verse is Gen 50:26" do 
         @scripture_reference = ScriptureReference.new(ScriptureVerse.new(1, 1, 1), ScriptureVerse.new(1, 50, 26))
