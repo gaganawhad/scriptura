@@ -29,6 +29,22 @@ describe ScriptureVerse do
     it 'stores the verse number as in integer' do 
       ScriptureVerse.new('1', '2', '3').number.should == 3
     end
+
+    it 'initializes scripture verse to Gen:1:1 when 1001001 is passed to it' do 
+      @scripture_verse = ScriptureVerse.new(1001001)
+      @scripture_verse.should be_a(ScriptureVerse)
+      @scripture_verse.scripture_book.number.should == 1
+      @scripture_verse.scripture_chapter.number.should == 1
+      @scripture_verse.number.should == 1
+    end
+
+    it 'initializes scripture verse to Psalm:119:176 when 19119176 is passed to it' do 
+      @scripture_verse = ScriptureVerse.new(19119176)
+      @scripture_verse.should be_a(ScriptureVerse)
+      @scripture_verse.scripture_book.number.should == 19
+      @scripture_verse.scripture_chapter.number.should == 119
+      @scripture_verse.number.should == 176
+    end
   end
 
   describe '#normalize' do
