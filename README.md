@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/gaganawhad/scripture-meta.png)](https://travis-ci.org/gaganawahd/scripture-meta)
-[![Code Climate](https://codeclimate.com/github/gaganawhad/scripture-meta.png)](https://codeclimate.com/github/gaganawhad/scripture-meta)
+[![Build Status](https://travis-ci.org/gaganawhad/scriptura.png)](https://travis-ci.org/gaganawahd/scriptura)
+[![Code Climate](https://codeclimate.com/github/gaganawhad/scriptura.png)](https://codeclimate.com/github/gaganawhad/scriptura)
 
 This is a ruby library that provides operations related with meta information about the Bible
 
@@ -7,7 +7,7 @@ This is a ruby library that provides operations related with meta information ab
 
 Add this line to your application's Gemfile:
 
-    gem 'scripture-meta'
+    gem 'scriptura'
 
 And then execute:
 
@@ -15,7 +15,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install scripture-meta
+    $ gem install scriptura
 
 ## Usage
 
