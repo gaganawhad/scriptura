@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    scriptura (0.0.1)
+    scriptura (0.0.2)
 
 GEM
   remote: https://rubygems.org/
@@ -11,10 +11,10 @@ GEM
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
-    rspec-core (2.14.2)
-    rspec-expectations (2.14.0)
+    rspec-core (2.14.7)
+    rspec-expectations (2.14.3)
       diff-lcs (>= 1.1.3, < 2.0)
-    rspec-mocks (2.14.1)
+    rspec-mocks (2.14.4)
 
 PLATFORMS
   ruby
