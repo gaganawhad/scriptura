@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module ScriptureMeta 
+module Scriptura
   describe ScriptureReference do 
     describe "#within_same_book?" do 
       it "returns a true when the start verse is Gen 1:1 and end verse is Gen 50:26" do 

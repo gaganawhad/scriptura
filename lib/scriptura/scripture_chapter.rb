@@ -1,4 +1,4 @@
-module ScriptureMeta
+module Scriptura
   class ScriptureChapter
     attr_accessor :scripture_book
 

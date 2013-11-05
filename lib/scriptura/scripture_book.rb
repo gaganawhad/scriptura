@@ -1,4 +1,4 @@
-module ScriptureMeta
+module Scriptura
   class ScriptureBook
     def initialize(number)
       raise ArgumentError, 'book number cannot be converted to an integer' unless number.respond_to?(:to_i)

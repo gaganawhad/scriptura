@@ -1,4 +1,4 @@
-module ScriptureMeta
+module Scriptura
   class ScriptureVerse
     attr_accessor :scripture_chapter
     attr_accessor :number

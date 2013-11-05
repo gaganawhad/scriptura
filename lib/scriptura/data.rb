@@ -1,4 +1,4 @@
-module ScriptureMeta
+module Scriptura
  METADATA = begin
   [{"number"=>1,
     "abbr"=>"GEN",

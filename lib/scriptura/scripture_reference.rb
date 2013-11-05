@@ -1,4 +1,4 @@
-module ScriptureMeta
+module Scriptura
   class ScriptureReference
     attr_accessor :start_verse
     attr_accessor :end_verse

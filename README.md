@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/gaganawhad/scriptura.png)](https://travis-ci.org/gaganawahd/scriptura)
+
 [![Code Climate](https://codeclimate.com/github/gaganawhad/scriptura.png)](https://codeclimate.com/github/gaganawhad/scriptura)
 
 This is a ruby library that provides operations related with meta information about the Bible
@@ -20,17 +20,17 @@ Or install it yourself as:
 ## Usage
 
 There are four main classes in this library: 
-  - ScriptureMeta
+  - Scripture
   - ScriptureBook
   - ScriptureChapter
   - ScriptureVerse
   - ScriptureReference
 
-###ScriptureMeta
+###Scripture
 
 The way it is written, this is actually a module that encapsulates methods that scope the entire bible
 ```ruby
-> ScriptureMeta.book_names
+> Scripture.book_names
  => ["Genesis", "Exodus", "Leviticus", ... , "Revelation"]
 
  ```

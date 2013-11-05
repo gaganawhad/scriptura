@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module ScriptureMeta
+module Scriptura
   describe ScriptureChapter do 
     describe '#initialize' do 
       it 'raises an error if either of the arugments cannot be converted to an integer' do
