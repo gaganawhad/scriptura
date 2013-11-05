@@ -1,5 +1,5 @@
+[![Build Status](https://travis-ci.org/gaganawhad/scriptura.png)](https://travis-ci.org/gaganawahd/scriptura)
 
-[![Code Climate](https://codeclimate.com/github/gaganawhad/scriptura.png)](https://codeclimate.com/github/gaganawhad/scriptura)
 
 This is a ruby library that provides operations related with meta information about the Bible
 
