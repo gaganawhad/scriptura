@@ -1,5 +1,7 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
-require 'scriptura/data'
+require 'json'
+json = File.read('lib/scriptura/metadata.json')
+METADATA = JSON.parse(json)
 require 'scriptura/scripture'
 require 'scriptura/scripture_book'
 require 'scriptura/scripture_chapter'
