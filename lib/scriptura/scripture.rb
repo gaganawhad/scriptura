@@ -1,3 +1,5 @@
+require 'json'
+
 module Scriptura
   module Scripture
     def self.old_testament_books
@@ -22,6 +24,12 @@ module Scriptura
 
     def self.book_names
       books.map(&:name)
+    end
+    def self.metadata
+      @metadata ||= begin
+        json = File.read('lib/scriptura/metadata.json')
+        JSON.parse(json)
+      end
     end
   end
 end
