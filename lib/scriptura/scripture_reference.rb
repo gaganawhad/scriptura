@@ -1,3 +1,5 @@
+require 'scriptura/scripture_verse'
+
 module Scriptura
   class ScriptureReference
     attr_accessor :start_verse

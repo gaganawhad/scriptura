@@ -1,3 +1,5 @@
+require 'scriptura/scripture_book'
+
 module Scriptura
   class ScriptureChapter
     attr_accessor :scripture_book

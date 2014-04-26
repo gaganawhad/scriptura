@@ -1,3 +1,5 @@
+require 'scriptura/scripture_chapter'
+
 module Scriptura
   class ScriptureVerse
     attr_accessor :scripture_chapter

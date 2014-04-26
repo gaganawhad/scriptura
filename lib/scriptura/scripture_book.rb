@@ -1,3 +1,5 @@
+require 'scriptura/scripture'
+
 module Scriptura
   class ScriptureBook
     def initialize(number)
