@@ -4,8 +4,8 @@ $LOAD_PATH.push File.expand_path('../lib', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ['Gagan Awhad']
   gem.email         = ['gagan.a.awhad@gmail.com']
-  gem.description   = 'This is a ruby library that provides operations related with meta information about the Bible'
-  gem.summary       = 'This is a ruby library that provides operations related with meta information about the Bible'
+  gem.description   = 'A ruby library that attempts to provide an intuitive API for operations on meta information about the Bible'
+  gem.summary       = 'A ruby library that attempts to provide an intuitive API for operations on meta information about the Bible'
   gem.homepage      = 'https://www.github.com/gaganawhad/scriptura'
 
   gem.files         = `git ls-files`.split($OUTPUT_RECORD_SEPARATOR)
