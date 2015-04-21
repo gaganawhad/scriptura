@@ -4,98 +4,98 @@ module Scriptura
   describe ScriptureBook do
     describe '#initialize' do
       it 'raises an error if the arugment cannot be converted to an integer' do
-        -> { ScriptureBook.new(:a1) }.should raise_error(ArgumentError)
+        expect { ScriptureBook.new(:a1) }.to raise_error(ArgumentError)
       end
 
       it 'raises an error if the book number is not within 1-66' do
-        -> { ScriptureBook.new(67) }.should raise_error(RuntimeError)
-        -> { ScriptureBook.new(0) }.should raise_error(RuntimeError)
+        expect { ScriptureBook.new(67) }.to raise_error(RuntimeError)
+        expect { ScriptureBook.new(0) }.to raise_error(RuntimeError)
       end
 
       it 'does not raise an error when the the number is within the range of 1-66' do
-        -> { ScriptureBook.new(32) }.should_not raise_error
+        expect { ScriptureBook.new(32) }.not_to raise_error
       end
     end
 
     describe '.find_by_name' do
       it 'initializes the ScriptureBook by the name' do
         @scripture_book = ScriptureBook.find_by_name('Romans')
-        @scripture_book.should be_an_instance_of(ScriptureBook)
-        @scripture_book.number.should == 45
+        expect(@scripture_book).to be_an_instance_of(ScriptureBook)
+        expect(@scripture_book.number).to eq(45)
       end
 
       it 'returns a helpful message when it doesn not find a book by the string passed to it' do
-        -> { ScriptureBook.find_by_name('does not exist') }.should raise_error
+        expect { ScriptureBook.find_by_name('does not exist') }.to raise_error
       end
     end
 
     describe '.find' do
       it "finds the book when a 'parameterised' string is passed to it" do
         @scripture_book = ScriptureBook.find('1-corinthians')
-        @scripture_book.should be_an_instance_of(ScriptureBook)
-        @scripture_book.number.should == 46
+        expect(@scripture_book).to be_an_instance_of(ScriptureBook)
+        expect(@scripture_book.number).to eq(46)
       end
 
       it 'returns a helpful message when it does not find a book by the string id passed to it' do
-        -> { ScriptureBook.find('wrong-id') }.should raise_error
+        expect { ScriptureBook.find('wrong-id') }.to raise_error
       end
     end
 
     describe '#book_name' do
       it 'prints the name of the book' do
-        ScriptureBook.new(1).name.should == 'Genesis'
+        expect(ScriptureBook.new(1).name).to eq('Genesis')
       end
     end
 
     describe '#number_of_chapters' do
       it 'returns the number of chapters' do
-        ScriptureBook.new(19).number_of_chapters.should == 150
+        expect(ScriptureBook.new(19).number_of_chapters).to eq(150)
       end
     end
 
     describe '#number' do
       it 'returns the serial number of the book' do
-        ScriptureBook.new(19).number.should == 19
+        expect(ScriptureBook.new(19).number).to eq(19)
       end
     end
 
     describe '#first_chapter' do
       it 'returns the first ScriptureChapter of that ScriptureBook' do
         @first_chapter = ScriptureBook.new(19).first_chapter
-        @first_chapter.should be_an_instance_of ScriptureChapter
-        @first_chapter.number.should == 1
+        expect(@first_chapter).to be_an_instance_of ScriptureChapter
+        expect(@first_chapter.number).to eq(1)
       end
     end
 
     describe '#last_chapter' do
       it 'returns the last ScriptureChapter of that ScriptureBook' do
         @last_chapter = ScriptureBook.new(19).last_chapter
-        @last_chapter.should be_an_instance_of ScriptureChapter
-        @last_chapter.number.should == 150
+        expect(@last_chapter).to be_an_instance_of ScriptureChapter
+        expect(@last_chapter.number).to eq(150)
       end
     end
 
     describe '#first_chapter_number' do
       it 'returns the first ScriptureChapter number of that ScriptureBook' do
-        ScriptureBook.new(19).first_chapter_number.should == 1
+        expect(ScriptureBook.new(19).first_chapter_number).to eq(1)
       end
     end
 
     describe '#last_chapter_number' do
       it 'returns the last ScriptureChapter number of that ScriptureBook' do
-        ScriptureBook.new(19).last_chapter_number.should == 150
+        expect(ScriptureBook.new(19).last_chapter_number).to eq(150)
       end
     end
 
     describe '#abbr_name' do
       it 'returns the abbreviation of the name of the scripture book' do
-        ScriptureBook.new(19).abbr_name.should == 'PSA'
+        expect(ScriptureBook.new(19).abbr_name).to eq('PSA')
       end
     end
 
     describe '#string_id' do
       it 'returns a human readable, pretty, string slug for the book in question' do
-        ScriptureBook.new(19).string_id.should == 'psalms'
+        expect(ScriptureBook.new(19).string_id).to eq('psalms')
       end
     end
   end
