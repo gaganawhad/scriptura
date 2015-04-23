@@ -15,7 +15,7 @@ Gem::Specification.new do |gem|
   gem.name          = 'scriptura'
   gem.require_paths = ['lib']
   gem.version       = '0.0.2'
-  gem.add_runtime_dependency 'json'
+  gem.add_runtime_dependency 'safe_yaml'
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'rubocop'
 end

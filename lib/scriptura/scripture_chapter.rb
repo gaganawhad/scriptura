@@ -39,7 +39,7 @@ module Scriptura
     private
 
     def chapter_hash
-      @chapter_hash ||= @scripture_book.to_hash['chapters'].find { |chapter| chapter['number'] == @number.to_i }
+      @chapter_hash ||= @scripture_book.to_hash['chapters'][@number.to_i]
     end
   end
 end

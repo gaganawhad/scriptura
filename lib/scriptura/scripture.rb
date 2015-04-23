@@ -1,4 +1,4 @@
-require 'json'
+require 'yaml'
 
 module Scriptura
   module Scripture
@@ -25,10 +25,10 @@ module Scriptura
     def self.book_names
       books.map(&:name)
     end
+
     def self.metadata
       @metadata ||= begin
-        json = File.read('lib/scriptura/metadata.json')
-        JSON.parse(json)
+        YAML.load_file('lib/scriptura/metadata.yml')
       end
     end
   end

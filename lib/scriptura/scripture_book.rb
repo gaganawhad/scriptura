@@ -9,13 +9,13 @@ module Scriptura
     end
 
     def self.find_by_name(name)
-      hash = Scripture.metadata.find { |book| book['name'] == name }
+      hash = Scripture.metadata.values.find { |book| book['name'] == name }
       fail "Book by the name #{name} was not found! Check if there was a spelling error.. or try initializing it with a book number" if hash.nil?
       new(hash['number'])
     end
 
     def self.find(string_id)
-      hash = Scripture.metadata.find { |book| book['string_id'] == string_id }
+      hash = Scripture.metadata.values.find { |book| book['string_id'] == string_id }
       fail "Book by the string_id #{string_id} was not found! Check if there was a spelling error.. or try initializing it with a book number" if hash.nil?
       new(hash['number'])
     end
@@ -63,7 +63,7 @@ module Scriptura
     private
 
     def book_hash
-      @book_hash ||= Scripture.metadata.find { |book| book['number'] == @number.to_i }
+      @book_hash ||= Scripture.metadata[@number.to_i]
     end
   end
 end
