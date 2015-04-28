@@ -14,7 +14,7 @@ module Scriptura
       end
 
       it 'raises an error when the chapter does not exist' do
-        expect { ScriptureChapter.new(19, 151) }.to raise_error(RuntimeError)
+        expect { ScriptureChapter.new(19, 151) }.to raise_error(Scriptura::ScriptureChapter::DoesNotExist)
       end
 
       it 'does not raise an error when the the book number is within the range of 1-66' do

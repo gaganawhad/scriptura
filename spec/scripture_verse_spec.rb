@@ -15,7 +15,7 @@ module Scriptura
       end
 
       it 'raises an error when the chapter does not exist' do
-        expect { ScriptureVerse.new(19, 151, 1) }.to raise_error(RuntimeError)
+        expect { ScriptureVerse.new(19, 151, 1) }.to raise_error(Scriptura::ScriptureChapter::DoesNotExist)
       end
 
       it 'raises an error when the verse does not exist' do

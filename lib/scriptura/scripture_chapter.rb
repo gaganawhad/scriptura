@@ -9,7 +9,7 @@ module Scriptura
       fail ArgumentError, 'chapter number cannot be converted to an integer' unless chapter_number.respond_to?(:to_i)
       fail 'book number should be within 1-66' unless (1..66).cover?(book_number.to_i)
       @number = chapter_number.to_i
-      fail 'chapter does not exist' if chapter_hash.nil?
+      fail DoesNotExist, 'chapter does not exist' if chapter_hash.nil?
     end
 
     def number
@@ -41,5 +41,7 @@ module Scriptura
     def chapter_hash
       @chapter_hash ||= @scripture_book.to_hash['chapters'][@number.to_i]
     end
-  end
+
+    class DoesNotExist < StandardError; end;
+  end  
 end
