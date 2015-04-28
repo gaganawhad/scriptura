@@ -15,7 +15,7 @@ module Scriptura
       end
       @scripture_chapter = ScriptureChapter.new(book_number, chapter_number)
       fail ArgumentError, 'verse number cannot be converted to an integer' unless verse_number.respond_to?(:to_i)
-      fail 'verse number does not exist' unless (1..@scripture_chapter.number_of_verses).cover? verse_number.to_i
+      fail DoesNotExist, 'verse number does not exist' unless (1..@scripture_chapter.number_of_verses).cover? verse_number.to_i
       @number = verse_number.to_i
     end
 
@@ -34,5 +34,7 @@ module Scriptura
       book_number, chapter_number = quotient.divmod(1000)
       [book_number, chapter_number, verse_number]
     end
+
+    class DoesNotExist < StandardError; end;
   end
 end
