@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/gaganawhad/scriptura.png)](https://travis-ci.org/gaganawahd/scriptura)
+[![Circle CI](https://circleci.com/gh/gaganawhad/scriptura.svg?style=svg)](https://circleci.com/gh/gaganawhad/scriptura)
 
 
 This is a ruby library that provides operations related with meta information about the Bible
@@ -19,7 +19,7 @@ Or install it yourself as:
 
 ## Usage
 
-There are four main classes in this library: 
+There are four main classes in this library:
   - Scripture
   - ScriptureBook
   - ScriptureChapter
@@ -42,19 +42,19 @@ Note: Books with no chapters are considered to be books with one chapter
 
 ```ruby
 > sb = ScriptureBook.new(1)
- => #<ScriptureBook:0x007fcb1b80f7f8 @number=1> 
+ => #<ScriptureBook:0x007fcb1b80f7f8 @number=1>
 > sb.name
-  => "Genesis" 
+  => "Genesis"
 > ScriptureBook.find_by_name("1 Corinthians")
- => #<ScriptureBook:0x007fa194831e80 @number=46> 
+ => #<ScriptureBook:0x007fa194831e80 @number=46>
 > ScriptureBook.find_by_name("1 Corinthians").number
- => 46 
+ => 46
 > ScriptureBook.find("1-corinthians")
- => #<ScriptureBook:0x007fa195866378 @number=46> 
+ => #<ScriptureBook:0x007fa195866378 @number=46>
 > ScriptureBook.find("1-corinthians").number
- => 46 
+ => 46
 > ScriptureBook.find("1-corinthians").number_of_chapters
- => 16 
+ => 16
 ```
 
 It raises an error when trying to initalize a scripture book that doesn't exist
@@ -68,6 +68,3 @@ RuntimeError: book number should be within 1-66
 ```
 
 Feel free to browse the code / test to get a sense of the API
-
-
-
