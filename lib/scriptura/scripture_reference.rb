@@ -2,8 +2,8 @@ require 'scriptura/scripture_verse'
 
 module Scriptura
   class ScriptureReference
-    attr_accessor :start_verse
-    attr_accessor :end_verse
+    attr_reader :start_verse
+    attr_reader :end_verse
 
     def initialize(start_verse, end_verse)
       @start_verse = start_verse

@@ -2,7 +2,7 @@ require 'scriptura/scripture_book'
 
 module Scriptura
   class ScriptureChapter
-    attr_accessor :scripture_book
+    attr_reader :scripture_book
 
     def initialize(book_number, chapter_number)
       @scripture_book = ScriptureBook.new(book_number)

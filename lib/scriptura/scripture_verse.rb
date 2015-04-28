@@ -2,8 +2,8 @@ require 'scriptura/scripture_chapter'
 
 module Scriptura
   class ScriptureVerse
-    attr_accessor :scripture_chapter
-    attr_accessor :number
+    attr_reader :scripture_chapter
+    attr_reader :number
 
     def initialize(*args)
       case
