@@ -4,7 +4,7 @@ module Scriptura
   class ScriptureBook
     def initialize(number)
       fail ArgumentError, 'book number cannot be converted to an integer' unless number.respond_to?(:to_i)
-      fail 'book number should be within 1-66' unless (1..66).cover?(number.to_i)
+      fail DoesNotExist, 'Book number should be within 1-66' unless (1..66).cover?(number.to_i)
       @number = number.to_i
     end
 
@@ -65,5 +65,7 @@ module Scriptura
     def book_hash
       @book_hash ||= Scripture.metadata[@number.to_i]
     end
+
+    class DoesNotExist < StandardError; end;
   end
 end

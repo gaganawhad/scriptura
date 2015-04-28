@@ -8,8 +8,8 @@ module Scriptura
       end
 
       it 'raises an error if the book number is not within 1-66' do
-        expect { ScriptureBook.new(67) }.to raise_error(RuntimeError)
-        expect { ScriptureBook.new(0) }.to raise_error(RuntimeError)
+        expect { ScriptureBook.new(67) }.to raise_error(Scriptura::ScriptureBook::DoesNotExist)
+        expect { ScriptureBook.new(0) }.to raise_error(Scriptura::ScriptureBook::DoesNotExist)
       end
 
       it 'does not raise an error when the the number is within the range of 1-66' do

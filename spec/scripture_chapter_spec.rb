@@ -9,8 +9,8 @@ module Scriptura
       end
 
       it 'raises an error if the book number is not within 1-66' do
-        expect { ScriptureChapter.new(67, 34) }.to raise_error(RuntimeError)
-        expect { ScriptureChapter.new(0, 34) }.to raise_error(RuntimeError)
+        expect { ScriptureChapter.new(67, 34) }.to raise_error(Scriptura::ScriptureBook::DoesNotExist)
+        expect { ScriptureChapter.new(0, 34) }.to raise_error(Scriptura::ScriptureBook::DoesNotExist)
       end
 
       it 'raises an error when the chapter does not exist' do
