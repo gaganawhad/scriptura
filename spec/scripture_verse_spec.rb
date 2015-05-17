@@ -68,5 +68,11 @@ module Scriptura
         expect(ScriptureVerse.new(12, 1, 8).number).to eq(8)
       end
     end
+
+    describe '#to_s' do
+      it 'returns the name of the book' do
+        expect(ScriptureVerse.new(19, 119, 176).to_s).to eq('Psalms 119:176')
+      end
+    end
   end
 end

@@ -98,5 +98,11 @@ module Scriptura
         expect(ScriptureBook.new(19).string_id).to eq('psalms')
       end
     end
+
+    describe '#to_s' do
+      it 'returns the name of the book' do
+        expect(ScriptureBook.new(19).to_s).to eq('Psalms')
+      end
+    end
   end
 end

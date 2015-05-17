@@ -61,5 +61,11 @@ module Scriptura
         expect(ScriptureChapter.new(19, 119).last_verse_number).to eq(176)
       end
     end
+
+    describe '#to_s' do
+      it 'returns the book name and chapter number of the book' do
+        expect(ScriptureChapter.new(19, 119).to_s).to eq('Psalms 119')
+      end
+    end
   end
 end

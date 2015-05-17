@@ -60,6 +60,10 @@ module Scriptura
       book_hash['string_id']
     end
 
+    def to_s
+      name
+    end
+
     private
 
     def book_hash

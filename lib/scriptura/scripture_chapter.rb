@@ -36,6 +36,10 @@ module Scriptura
       last_verse.number
     end
 
+    def to_s
+      "#{scripture_book} #{@number}"
+    end
+
     private
 
     def chapter_hash
@@ -43,5 +47,5 @@ module Scriptura
     end
 
     class DoesNotExist < StandardError; end;
-  end  
+  end
 end

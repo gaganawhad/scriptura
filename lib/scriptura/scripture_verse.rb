@@ -27,6 +27,10 @@ module Scriptura
       scripture_book.number * 1_000_000 + scripture_chapter.number * 1000 + @number
     end
 
+    def to_s
+      "#{scripture_chapter}:#{number}"
+    end
+
     private
 
     def de_normalize(number)
