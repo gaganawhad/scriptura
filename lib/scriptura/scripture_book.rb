@@ -69,6 +69,6 @@ module Scriptura
       @book_hash ||= Scripture.metadata[@book_number.to_i]
     end
 
-    class DoesNotExist < StandardError; end;
+    class DoesNotExist < StandardError; end
   end
 end

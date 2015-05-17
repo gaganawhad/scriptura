@@ -38,6 +38,6 @@ module Scriptura
       [book_number, chapter_number, verse_number]
     end
 
-    class DoesNotExist < StandardError; end;
+    class DoesNotExist < StandardError; end
   end
 end

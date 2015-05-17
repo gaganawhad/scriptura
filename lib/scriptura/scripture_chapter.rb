@@ -44,6 +44,6 @@ module Scriptura
       @chapter_hash ||= @scripture_book.to_hash['chapters'][@chapter_number.to_i]
     end
 
-    class DoesNotExist < StandardError; end;
+    class DoesNotExist < StandardError; end
   end
 end
