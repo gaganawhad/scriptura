@@ -2,6 +2,7 @@ require 'scriptura/scripture_chapter'
 
 module Scriptura
   class ScriptureVerse
+    attr_reader :scripture_book
     attr_reader :scripture_chapter
     attr_reader :verse_number
     alias_method :number, :verse_number
@@ -15,13 +16,10 @@ module Scriptura
         book_number, chapter_number, verse_number = args
       end
       @scripture_chapter = ScriptureChapter.new(book_number, chapter_number)
+      @scripture_book = @scripture_chapter.scripture_book
       fail ArgumentError, 'verse number cannot be converted to an integer' unless verse_number.respond_to?(:to_i)
       fail DoesNotExist, 'verse number does not exist' unless (1..@scripture_chapter.number_of_verses).cover? verse_number.to_i
       @verse_number = verse_number.to_i
-    end
-
-    def scripture_book
-      @scripture_chapter.scripture_book
     end
 
     def normalize
