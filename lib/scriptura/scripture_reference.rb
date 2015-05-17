@@ -11,31 +11,27 @@ module Scriptura
     end
 
     def within_same_book?
-      start_verse.scripture_book.number == end_verse.scripture_book.number
+      start_verse.scripture_book == end_verse.scripture_book
     end
 
     def within_same_chapter?
-      within_same_book? &&
-        start_verse.scripture_chapter.number == end_verse.scripture_chapter.number
+      start_verse.scripture_chapter == end_verse.scripture_chapter
     end
 
     def spans_entire_book?
-      within_same_book? &&
-        start_verse.scripture_chapter.number == start_verse.scripture_book.first_chapter.number &&
-        start_verse.number == start_verse.scripture_chapter.first_verse.number &&
-        end_verse.scripture_chapter.number == end_verse.scripture_book.last_chapter.number &&
-        end_verse.number == end_verse.scripture_chapter.last_verse.number
+      scripture_book = start_verse.scripture_book
+      start_verse == scripture_book.first_chapter.first_verse &&
+        end_verse == scripture_book.last_chapter.last_verse
     end
 
     def spans_entire_chapter?
-      within_same_chapter? &&
-        start_verse.number == start_verse.scripture_chapter.first_verse.number &&
-        end_verse.number == end_verse.scripture_chapter.last_verse.number
+      scripture_chapter = start_verse.scripture_chapter
+      start_verse == scripture_chapter.first_verse &&
+        end_verse == scripture_chapter.last_verse
     end
 
     def spans_single_verse?
-      within_same_chapter? &&
-        start_verse.number == end_verse.number
+      start_verse == end_verse
     end
 
     def to_s
