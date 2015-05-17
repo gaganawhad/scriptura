@@ -104,5 +104,20 @@ module Scriptura
         expect(ScriptureBook.new(19).to_s).to eq('Psalms')
       end
     end
+
+    describe '#==' do
+      it 'returns a false when the other is not a ScriptureBook' do
+        expect(ScriptureBook.new(19)).to_not eq double('Random Object', :number => 19)
+                                                .as_null_object
+      end
+
+      it 'returns a false when it is not the identical book' do
+        expect(ScriptureBook.new(19)).to_not eq ScriptureBook.new(20)
+      end
+
+      it 'returns a true when the other the identical scripture book' do
+        expect(ScriptureBook.new(19)).to eq ScriptureBook.new(19)
+      end
+    end
   end
 end

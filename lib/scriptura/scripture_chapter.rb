@@ -38,6 +38,12 @@ module Scriptura
       "#{scripture_book} #{@chapter_number}"
     end
 
+    def ==(other)
+      return false unless other.is_a?(ScriptureChapter)
+      scripture_book == other.scripture_book &&
+        chapter_number == other.chapter_number
+    end
+
     private
 
     def chapter_hash

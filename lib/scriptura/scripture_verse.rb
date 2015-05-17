@@ -30,6 +30,13 @@ module Scriptura
       "#{scripture_chapter}:#{number}"
     end
 
+    def ==(other)
+      return false unless other.is_a?(ScriptureVerse)
+      scripture_book == other.scripture_book &&
+        scripture_chapter == other.scripture_chapter &&
+        verse_number == other.verse_number
+    end
+
     private
 
     def de_normalize(number)

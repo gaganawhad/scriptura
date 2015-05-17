@@ -74,5 +74,29 @@ module Scriptura
         expect(ScriptureVerse.new(19, 119, 176).to_s).to eq('Psalms 119:176')
       end
     end
+
+    describe '#==' do
+      it 'returns a false when the other is not a ScriptureVerse' do
+        fake_verse = double('Fake Verse', :scripture_chapter => 12,
+                                          :scripture_book => 2,
+                                          :verse_number => 8)
+                     .as_null_object
+
+        expect(ScriptureVerse.new(12, 2, 8)).to_not eq fake_verse
+      end
+
+      it 'returns a false when it is not the identical verse' do
+        expect(ScriptureVerse.new(12, 2, 8)).to_not eq ScriptureVerse.new(12, 2, 9)
+        expect(ScriptureVerse.new(12, 2, 8)).to_not eq ScriptureVerse.new(12, 2, 7)
+        expect(ScriptureVerse.new(12, 2, 8)).to_not eq ScriptureVerse.new(12, 3, 8)
+        expect(ScriptureVerse.new(12, 2, 8)).to_not eq ScriptureVerse.new(12, 1, 8)
+        expect(ScriptureVerse.new(12, 2, 8)).to_not eq ScriptureVerse.new(13, 2, 8)
+        expect(ScriptureVerse.new(12, 2, 8)).to_not eq ScriptureVerse.new(11, 2, 8)
+      end
+
+      it 'returns a true when the other the identical scripture book' do
+        expect(ScriptureVerse.new(12, 2, 8)).to eq ScriptureVerse.new(12, 2, 8)
+      end
+    end
   end
 end

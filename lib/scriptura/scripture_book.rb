@@ -63,6 +63,11 @@ module Scriptura
       name
     end
 
+    def ==(other)
+      return false unless other.is_a?(ScriptureBook)
+      book_number == other.book_number
+    end
+
     private
 
     def book_hash
