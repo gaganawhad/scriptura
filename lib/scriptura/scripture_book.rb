@@ -2,10 +2,13 @@ require 'scriptura/scripture'
 
 module Scriptura
   class ScriptureBook
+    attr_reader :book_number
+    alias_method :number, :book_number
+
     def initialize(number)
       fail ArgumentError, 'book number cannot be converted to an integer' unless number.respond_to?(:to_i)
       fail DoesNotExist, 'Book number should be within 1-66' unless (1..66).cover?(number.to_i)
-      @number = number.to_i
+      @book_number = number.to_i
     end
 
     def self.find_by_name(name)
@@ -30,10 +33,6 @@ module Scriptura
 
     def number_of_chapters
       book_hash['chapters'].count
-    end
-
-    def number
-      book_hash['number']
     end
 
     def first_chapter
@@ -67,7 +66,7 @@ module Scriptura
     private
 
     def book_hash
-      @book_hash ||= Scripture.metadata[@number.to_i]
+      @book_hash ||= Scripture.metadata[@book_number.to_i]
     end
 
     class DoesNotExist < StandardError; end;

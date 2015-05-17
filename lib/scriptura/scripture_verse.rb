@@ -3,7 +3,8 @@ require 'scriptura/scripture_chapter'
 module Scriptura
   class ScriptureVerse
     attr_reader :scripture_chapter
-    attr_reader :number
+    attr_reader :verse_number
+    alias_method :number, :verse_number
 
     def initialize(*args)
       case
@@ -16,7 +17,7 @@ module Scriptura
       @scripture_chapter = ScriptureChapter.new(book_number, chapter_number)
       fail ArgumentError, 'verse number cannot be converted to an integer' unless verse_number.respond_to?(:to_i)
       fail DoesNotExist, 'verse number does not exist' unless (1..@scripture_chapter.number_of_verses).cover? verse_number.to_i
-      @number = verse_number.to_i
+      @verse_number = verse_number.to_i
     end
 
     def scripture_book
@@ -24,7 +25,7 @@ module Scriptura
     end
 
     def normalize
-      scripture_book.number * 1_000_000 + scripture_chapter.number * 1000 + @number
+      scripture_book.number * 1_000_000 + scripture_chapter.number * 1000 + @verse_number
     end
 
     def to_s
