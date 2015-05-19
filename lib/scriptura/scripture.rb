@@ -31,5 +31,9 @@ module Scriptura
         YAML.load_file('lib/scriptura/metadata.yml')
       end
     end
+
+    def self.find_book_hash attribute, value
+      metadata.values.find { |book| book[attribute.to_s] == value }
+    end
   end
 end
