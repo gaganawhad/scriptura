@@ -36,7 +36,7 @@ Style/EmptyLines:
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, UseHashRocketsWithSymbolValues.
 Style/HashSyntax:
-  Enabled: false
+  EnforcedStyle: hash_rockets
 
 # Offense count: 1
 # Cop supports --auto-correct.
