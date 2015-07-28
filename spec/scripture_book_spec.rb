@@ -25,7 +25,7 @@ module Scriptura
       end
 
       it 'returns a helpful message when it doesn not find a book by the string passed to it' do
-        expect { ScriptureBook.find_by_name('does not exist') }.to raise_error
+        expect { ScriptureBook.find_by_name('does not exist') }.to raise_error(Scriptura::ScriptureBook::DoesNotExist)
       end
     end
 
@@ -37,7 +37,7 @@ module Scriptura
       end
 
       it 'returns a helpful message when it does not find a book by the string id passed to it' do
-        expect { ScriptureBook.find('wrong-id') }.to raise_error
+        expect { ScriptureBook.find('wrong-id') }.to raise_error(Scriptura::ScriptureBook::DoesNotExist)
       end
     end
 
