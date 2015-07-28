@@ -35,12 +35,14 @@ module Scriptura
     private
 
     def extract_arguments args
-      case
-      when args.count == 1
+      case args.count
+      when 1
         fail ArgumentError, 'normalized value of scripture verse cannot be converted to an integer' unless args[0].respond_to?(:to_i)
         book_number, chapter_number, verse_number = de_normalize(args[0].to_i)
-      when args.count == 3
+      when 3
         book_number, chapter_number, verse_number = args
+      else
+        fail ArgumentError, 'wrong number of arguments! The arguments should either be one normalized value for the verse or 3 separate book, chapter, verse numbers'
       end
     end
 

@@ -9,6 +9,12 @@ module Scriptura
         expect { ScriptureVerse.new(3, 2, :four) }.to raise_error(ArgumentError)
       end
 
+      it 'raises an error if an incorrect number of arugments is passed to it' do
+        expect { ScriptureVerse.new(1, 2) }.to raise_error(ArgumentError)
+        expect { ScriptureVerse.new(1, 2, 3, 4) }.to raise_error(ArgumentError)
+
+      end
+
       it 'raises an error if the book number is not within 1-66' do
         expect { ScriptureVerse.new(67, 34, 12) }.to raise_error(Scriptura::ScriptureBook::DoesNotExist)
         expect { ScriptureVerse.new(0, 34, 12) }.to raise_error(Scriptura::ScriptureBook::DoesNotExist)
