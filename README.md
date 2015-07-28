@@ -1,6 +1,7 @@
 [![Gem Version](https://badge.fury.io/rb/scriptura.svg)](http://badge.fury.io/rb/scriptura)
 [![Circle CI](https://circleci.com/gh/gaganawhad/scriptura.svg?style=svg)](https://circleci.com/gh/gaganawhad/scriptura)
 [![Code Climate](https://codeclimate.com/repos/5558c18fe30ba00c6c000093/badges/91116ded5697e16610e2/gpa.svg)](https://codeclimate.com/repos/5558c18fe30ba00c6c000093/feed)
+[![Dependency Status](https://gemnasium.com/gaganawhad/scriptura.svg)](https://gemnasium.com/gaganawhad/scriptura)
 [![Test Coverage](https://codeclimate.com/repos/5558c18fe30ba00c6c000093/badges/91116ded5697e16610e2/coverage.svg)](https://codeclimate.com/repos/5558c18fe30ba00c6c000093/coverage)
 
 
