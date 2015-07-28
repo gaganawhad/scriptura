@@ -2,6 +2,9 @@ require 'yaml'
 
 module Scriptura
   module Scripture
+    HOME_PATH = File.realpath(File.join(File.dirname(__FILE__), '..', '..'))
+    METADATA_FILE = File.join(HOME_PATH, 'lib', 'scriptura', 'metadata.yml')
+
     def self.old_testament_books
       books = []
       (1..39).each do |book_number|
@@ -27,9 +30,7 @@ module Scriptura
     end
 
     def self.metadata
-      @metadata ||= begin
-        YAML.load_file('lib/scriptura/metadata.yml')
-      end
+      @metadata ||= YAML.load_file(METADATA_FILE)
     end
 
     def self.find_book_hash attribute, value
