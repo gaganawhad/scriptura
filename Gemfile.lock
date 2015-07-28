@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    scriptura (0.0.3)
+    scriptura (0.0.4)
       safe_yaml
 
 GEM
