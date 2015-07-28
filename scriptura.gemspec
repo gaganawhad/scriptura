@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
 $LOAD_PATH.push File.expand_path('../lib', __FILE__)
+require "scriptura/version"
 
 Gem::Specification.new do |gem|
   gem.authors       = ['Gagan Awhad']
@@ -14,7 +15,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = 'scriptura'
   gem.require_paths = ['lib']
-  gem.version       = '0.0.2'
+  gem.version       = Scriptura::Version::STRING
   gem.add_runtime_dependency 'safe_yaml'
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'rubocop'
