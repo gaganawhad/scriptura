@@ -8,13 +8,8 @@ module Scriptura
     alias_method :number, :verse_number
 
     def initialize(*args)
-      case
-      when args.count == 1 && args[0].is_a?(Fixnum)
-        fail ArgumentError, 'normalized value of scripture verse cannot be converted to an integer' unless args[0].respond_to?(:to_i)
-        book_number, chapter_number, verse_number = de_normalize(args[0])
-      when args.count == 3
-        book_number, chapter_number, verse_number = args
-      end
+      book_number, chapter_number, verse_number = extract_arguments(args)
+
       @scripture_chapter = ScriptureChapter.new(book_number, chapter_number)
       @scripture_book = @scripture_chapter.scripture_book
       fail ArgumentError, 'verse number cannot be converted to an integer' unless verse_number.respond_to?(:to_i)
@@ -38,6 +33,16 @@ module Scriptura
     end
 
     private
+
+    def extract_arguments args
+      case
+      when args.count == 1
+        fail ArgumentError, 'normalized value of scripture verse cannot be converted to an integer' unless args[0].respond_to?(:to_i)
+        book_number, chapter_number, verse_number = de_normalize(args[0].to_i)
+      when args.count == 3
+        book_number, chapter_number, verse_number = args
+      end
+    end
 
     def de_normalize(number)
       quotient, verse_number = number.divmod(1000)

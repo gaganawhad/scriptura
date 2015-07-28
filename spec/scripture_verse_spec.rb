@@ -38,6 +38,14 @@ module Scriptura
         expect(@scripture_verse.number).to eq(1)
       end
 
+      it "initializes scripture verse to Gen 1:1 when '1001001' is passed to it" do
+        @scripture_verse = ScriptureVerse.new('1001001')
+        expect(@scripture_verse).to be_a(ScriptureVerse)
+        expect(@scripture_verse.scripture_book.number).to eq(1)
+        expect(@scripture_verse.scripture_chapter.number).to eq(1)
+        expect(@scripture_verse.number).to eq(1)
+      end
+
       it 'initializes scripture verse to Psalm 119:176 when 19119176 is passed to it' do
         @scripture_verse = ScriptureVerse.new(19_119_176)
         expect(@scripture_verse).to be_a(ScriptureVerse)
