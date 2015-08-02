@@ -1,8 +1,8 @@
 [![Gem Version](https://badge.fury.io/rb/scriptura.svg)](http://badge.fury.io/rb/scriptura)
 [![Circle CI](https://circleci.com/gh/gaganawhad/scriptura.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/gaganawhad/scriptura)
 [![Code Climate](https://codeclimate.com/github/gaganawhad/scriptura/badges/gpa.svg)](https://codeclimate.com/github/gaganawhad/scriptura)
-[![Dependency Status](https://gemnasium.com/gaganawhad/scriptura.svg)](https://gemnasium.com/gaganawhad/scriptura)
 [![Test Coverage](https://codeclimate.com/github/gaganawhad/scriptura/badges/coverage.svg)](https://codeclimate.com/github/gaganawhad/scriptura/coverage)
+[![Dependency Status](https://gemnasium.com/gaganawhad/scriptura.svg)](https://gemnasium.com/gaganawhad/scriptura)
 
 This is a ruby library that provides operations related with meta information about the Bible
 
