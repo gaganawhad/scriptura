@@ -1,7 +1,7 @@
 .bundle
+Gemfile.lock
 *.swo
 *.swp
 *.xml
 *.csv
 *.gem
-
