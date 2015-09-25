@@ -133,9 +133,9 @@ module Scriptura
         expect(@scripture_reference.to_s).to eq('Genesis 1:1-2')
       end
 
-      it "returns 'Genesis 1:1 - 3:2'" do
+      it "returns 'Genesis 1:1-3:2'" do
         @scripture_reference = ScriptureReference.new(ScriptureVerse.new(1, 1, 1), ScriptureVerse.new(1, 3, 2))
-        expect(@scripture_reference.to_s).to eq('Genesis 1:1 - 3:2')
+        expect(@scripture_reference.to_s).to eq('Genesis 1:1-3:2')
       end
 
       it "returns 'Genesis 1:1 - Exodus 3:2'" do
