@@ -43,11 +43,11 @@ module Scriptura
       when spans_single_verse?
         start_verse.to_s
       when within_same_chapter?
-        "#{start_verse}-#{end_verse.number}"
+        "#{start_verse}–#{end_verse.number}"
       when within_same_book?
-        "#{start_verse}-#{end_verse.scripture_chapter.number}:#{end_verse.number}"
+        "#{start_verse}–#{end_verse.scripture_chapter.number}:#{end_verse.number}"
       else
-        "#{start_verse} - #{end_verse}"
+        "#{start_verse} – #{end_verse}"
       end
     end
   end
