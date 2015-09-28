@@ -42,6 +42,11 @@ module Scriptura
         expect(@scripture_reference.spans_entire_book?).to eq(true)
       end
 
+      it 'returns false when the verse spans two books' do
+        @scripture_reference = ScriptureReference.new(ScriptureVerse.new(1, 1, 1), ScriptureVerse.new(2, 40, 38))
+        expect(@scripture_reference.spans_entire_book?).to eq(false)
+      end
+
       it 'returns a false when the start verse is Gen 1:2 and end verse is Gen 50:26' do
         @scripture_reference = ScriptureReference.new(ScriptureVerse.new(1, 1, 2), ScriptureVerse.new(1, 50, 26))
         expect(@scripture_reference.spans_entire_book?).to eq(false)
@@ -57,6 +62,11 @@ module Scriptura
       it 'returns a true when the start verse is Gen 50:1 and end verse is Gen 50:26' do
         @scripture_reference = ScriptureReference.new(ScriptureVerse.new(1, 50, 1), ScriptureVerse.new(1, 50, 26))
         expect(@scripture_reference.spans_entire_chapter?).to eq(true)
+      end
+
+      it 'returns false when the verse spans two chapters' do
+        @scripture_reference = ScriptureReference.new(ScriptureVerse.new(1, 1, 1), ScriptureVerse.new(1, 2, 25))
+        expect(@scripture_reference.spans_entire_book?).to eq(false)
       end
 
       it 'returns a false when the start verse is Gen 50:2 and end verse is Gen 50:26' do
@@ -118,19 +128,19 @@ module Scriptura
         expect(@scripture_reference.to_s).to eq('Genesis 1:1')
       end
 
-      it "returns 'Genesis 1:1-2'" do
+      it "returns 'Genesis 1:1–2'" do
         @scripture_reference = ScriptureReference.new(ScriptureVerse.new(1, 1, 1), ScriptureVerse.new(1, 1, 2))
-        expect(@scripture_reference.to_s).to eq('Genesis 1:1-2')
+        expect(@scripture_reference.to_s).to eq('Genesis 1:1–2')
       end
 
-      it "returns 'Genesis 1:1 - 3:2'" do
+      it "returns 'Genesis 1:1–3:2'" do
         @scripture_reference = ScriptureReference.new(ScriptureVerse.new(1, 1, 1), ScriptureVerse.new(1, 3, 2))
-        expect(@scripture_reference.to_s).to eq('Genesis 1:1 - 3:2')
+        expect(@scripture_reference.to_s).to eq('Genesis 1:1–3:2')
       end
 
-      it "returns 'Genesis 1:1 - Exodus 3:2'" do
+      it "returns 'Genesis 1:1 – Exodus 3:2'" do
         @scripture_reference = ScriptureReference.new(ScriptureVerse.new(1, 1, 1), ScriptureVerse.new(2, 3, 2))
-        expect(@scripture_reference.to_s).to eq('Genesis 1:1 - Exodus 3:2')
+        expect(@scripture_reference.to_s).to eq('Genesis 1:1 – Exodus 3:2')
       end
     end
   end
