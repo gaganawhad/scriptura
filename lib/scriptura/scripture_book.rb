@@ -1,4 +1,5 @@
 require 'scriptura/scripture'
+require 'scriptura/testament'
 
 module Scriptura
   class ScriptureBook
@@ -49,6 +50,15 @@ module Scriptura
 
     def last_chapter_number
       last_chapter.number
+    end
+
+
+    def testament
+      @testament = if number < 40
+        Scriptura::Testament.new('Old')
+      else
+        Scriptura::Testament.new('New')
+      end
     end
 
     def to_hash
