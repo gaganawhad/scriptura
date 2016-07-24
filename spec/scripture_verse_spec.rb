@@ -12,7 +12,6 @@ module Scriptura
       it 'raises an error if an incorrect number of arugments is passed to it' do
         expect { ScriptureVerse.new(1, 2) }.to raise_error(ArgumentError)
         expect { ScriptureVerse.new(1, 2, 3, 4) }.to raise_error(ArgumentError)
-
       end
 
       it 'raises an error if the book number is not within 1-66' do
