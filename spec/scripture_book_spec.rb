@@ -119,5 +119,19 @@ module Scriptura
         expect(ScriptureBook.new(19)).to eq ScriptureBook.new(19)
       end
     end
+
+    describe '#testament' do
+      it 'returns the testament of the book' do
+        genesis = ScriptureBook.new(1)
+        malachi = ScriptureBook.new(39)
+        matthew = ScriptureBook.new(40)
+        revelation = ScriptureBook.new(66)
+        expect(genesis.testament).to be_an_instance_of(Scriptura::Testament)
+        expect(genesis.testament.name).to eq 'Old'
+        expect(malachi.testament.name).to eq 'Old'
+        expect(matthew.testament.name).to eq 'New'
+        expect(revelation.testament.name).to eq 'New'
+      end
+    end
   end
 end
