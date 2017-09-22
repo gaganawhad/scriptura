@@ -2878,6 +2878,7 @@
   abbr: OBA
   name: Obadiah
   string_id: obadiah
+  testament: old
   chapters:
     1:
       number: 1
@@ -2982,6 +2983,7 @@
   abbr: HAG
   name: Haggai
   string_id: haggai
+  testament: old
   chapters:
     1:
       number: 1
@@ -3790,6 +3792,7 @@
   abbr: PHM
   name: Philemon
   string_id: philemon
+  testament: new
   chapters:
     1:
       number: 1
@@ -3927,6 +3930,7 @@
   abbr: 2JO
   name: 2 John
   string_id: 2-john
+  testament: new
   chapters:
     1:
       number: 1
@@ -3936,6 +3940,7 @@
   abbr: 3JO
   name: 3 John
   string_id: 3-john
+  testament: new
   chapters:
     1:
       number: 1
@@ -3945,6 +3950,7 @@
   abbr: JUD
   name: Jude
   string_id: jude
+  testament: new
   chapters:
     1:
       number: 1
